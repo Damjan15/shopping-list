@@ -14,7 +14,64 @@
 </head>
 
 <body>
-  <h1>Shopping List Project 👋</h1>
+  <div class="container">
+    <header>
+      <img src="images/note.png" alt="note-icon">
+      <h1 class="app-title">Shopping List</h1>
+    </header>
+
+    <form id="item-form">
+      <div class="form-control">
+        <input type="text" class="form-input" id="item-input" placeholder="Enter Item">
+      </div>
+
+      <div class="form-control">
+        <button type="submit" class="btn">
+          <i class="fa-solid fa-plus"></i> Add Item
+        </button>
+      </div>
+    </form>
+
+    <div class="filter">
+      <input type="text" class="form-input-filter" id="filter" placeholder="Filter Items">
+    </div>
+
+    <ul class="items" id="item-list">
+      <li>
+        Apples
+
+        <button class="remove-item btn-link text-red">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </li>
+
+      <li>
+        Orange Juice
+
+        <button class="remove-item btn-link text-red">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </li>
+
+      <li>
+        Oreos
+
+        <button class="remove-item btn-link text-red">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </li>
+
+      <li>
+        Milk
+
+        <button class="remove-item btn-link text-red">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </li>
+    </ul>
+
+    <button id="clear" class="btn-clear">Clear All</button>
+  </div>
 
 
   <script src="js/script.js"></script>
