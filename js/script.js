@@ -28,6 +28,11 @@ function addItem(e) {
     itemToEdit.remove();
 
     isEditMode = false;
+  } else {
+    if (checkIfItemExists(newItem)) {
+      alert("That item already exists!");
+      return;
+    }
   }
 
   // Create item DOM element
@@ -37,6 +42,9 @@ function addItem(e) {
   addItemToStorage(newItem);
 
   checkUI();
+
+  // Reset input
+  itemInput.value = "";
 }
 
 function addItemToDOM(item) {
@@ -166,6 +174,12 @@ function createIcon(classes) {
   icon.className = classes;
 
   return icon;
+}
+
+function checkIfItemExists(item) {
+  const itemsFromStorage = getItemsFromStorage();
+
+  return itemsFromStorage.includes(item);
 }
 
 function checkUI() {
